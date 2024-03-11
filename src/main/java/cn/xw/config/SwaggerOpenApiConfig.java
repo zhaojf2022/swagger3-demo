@@ -1,8 +1,5 @@
 package cn.xw.config;
 
-
-// 使用注解的方式实现描Swagger的配置
-
 import io.swagger.v3.oas.annotations.ExternalDocumentation;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.enums.SecuritySchemeIn;
@@ -15,7 +12,6 @@ import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.boot.SpringBootConfiguration;
 
-// 使用代码实现接口的描述及Swagger的配置
 //import io.swagger.v3.oas.models.OpenAPI;
 //import io.swagger.v3.oas.models.Paths;
 //import io.swagger.v3.oas.models.info.Contact;
@@ -24,53 +20,54 @@ import org.springframework.boot.SpringBootConfiguration;
 
 
 /**
+ * Swagger的配置
  * @author Anhui OuYang
  * @version 1.0
  **/
+
+//使用注解的方式实现
 @SpringBootConfiguration
 @OpenAPIDefinition(
-        // ## API的基本信息，包括标题、版本号、描述、联系人等
-        info = @Info(
-                title = "Swagger3.0 (Open API) 框架学习示例文档",       // Api接口文档标题（必填）
-                description = "学习Swagger框架而用来定义测试的文档",      // Api接口文档描述
-                version = "1.2.1",                                   // Api接口版本
-                termsOfService = "https://example.com/",             // Api接口的服务条款地址
-                contact = @Contact(
-                        name = "蚂蚁小哥",                            // 作者名称
-                        email = "xiaofeng@qq.com",                  // 作者邮箱
-                        url = "https://www.cnblogs.com/antLaddie/"  // 介绍作者的URL地址
-                ),
-                license = @License(                                                // 设置联系人信息
-                        name = "Apache 2.0",                                       // 授权名称
-                        url = "https://www.apache.org/licenses/LICENSE-2.0.html"   // 授权信息
-                )
-        ),
-        security = @SecurityRequirement(name = "JWT-test"),
-        // ## 表示服务器地址或者URL模板列表，多个服务地址随时切换（只不过是有多台IP有当前的服务API）
-        servers = {
-                @Server(url = "http://192.168.2.235/demo/", description = "本地服务器一服务"),
-                @Server(url = "http://192.168.2.236/demo/", description = "本地服务器二服务"),
-        },
-        externalDocs = @ExternalDocumentation(description = "更多内容请查看该链接", url = "xxx"))
+    // API的基本信息，包括标题、版本号、描述、联系人等
+    info = @Info(
+            title = "Swagger3.0 (Open API) 框架学习示例文档",       // Api接口文档标题（必填）
+            description = "学习Swagger框架而用来定义测试的文档",      // Api接口文档描述
+            version = "1.2.1",                                   // Api接口版本
+            termsOfService = "https://example.com/",             // Api接口的服务条款地址
+            contact = @Contact(
+                    name = "蚂蚁小哥",                            // 作者名称
+                    email = "xiaofeng@qq.com",                  // 作者邮箱
+                    url = "https://www.cnblogs.com/antLaddie/"  // 介绍作者的URL地址
+            ),
+            license = @License(                                                // 设置联系人信息
+                    name = "Apache 2.0",                                       // 授权名称
+                    url = "https://www.apache.org/licenses/LICENSE-2.0.html"   // 授权信息
+            )
+    ),
+    security = @SecurityRequirement(name = "JWT-test"),
+    // 表示服务器地址或者URL模板列表，多个服务地址随时切换（只不过是有多台IP有当前的服务API）
+    servers = {
+            @Server(url = "http://192.168.2.235/demo/", description = "本地服务器一服务"),
+            @Server(url = "http://192.168.2.236/demo/", description = "本地服务器二服务"),
+    },
+    externalDocs = @ExternalDocumentation(description = "更多内容请查看该链接", url = "xxx"))
 @SecurityScheme(
-        name = "JWT-test",                   // 认证方案名称
-        type = SecuritySchemeType.HTTP,      // 认证类型，当前为http认证
-        description = "这是一个认证的描述详细",  // 描述信息
-        in = SecuritySchemeIn.HEADER,        // 代表在http请求头部
-        scheme = "bearer",                   // 认证方案，如：Authorization: bearer token信息
-        bearerFormat = "JWT")                // 表示使用 JWT 格式作为 Bearer Token 的格式
+    name = "JWT-test",                   // 认证方案名称
+    type = SecuritySchemeType.HTTP,      // 认证类型，当前为http认证
+    description = "这是一个认证的描述详细",  // 描述信息
+    in = SecuritySchemeIn.HEADER,        // 代表在http请求头部
+    scheme = "bearer",                   // 认证方案，如：Authorization: bearer token信息
+    bearerFormat = "JWT")                // 表示使用 JWT 格式作为 Bearer Token 的格式
 @SecurityScheme(
-        name = "X-API-KEY",
-        type = SecuritySchemeType.APIKEY,
-        description = "这是一个认证的描述详细",
-        in = SecuritySchemeIn.HEADER,
-        scheme = "bearer")
+    name = "X-API-KEY",
+    type = SecuritySchemeType.APIKEY,
+    description = "这是一个认证的描述详细",
+    in = SecuritySchemeIn.HEADER,
+    scheme = "bearer")
+
 public class SwaggerOpenApiConfig {
 
-//    /***
-//     * 构建Swagger3.0文档说明
-//     * @return 返回 OpenAPI
-//     */
+// 使用代码的方式实现
 //    @Bean
 //    public OpenAPI customOpenAPI() {
 //

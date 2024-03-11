@@ -57,6 +57,7 @@ public class InterfaceDescriptionConfig {
         headers.put("my-header1", new Header().description("测试响应头1").schema(new StringSchema()));
         headers.put("my-header2", new Header().description("测试响应头2").schema(new StringSchema()));
         headers.put("my-header3", new Header().description("测试响应头3").schema(new StringSchema()));
+
         // 设置响应信息
         ApiResponses apiResponses = new ApiResponses()
                 .addApiResponse("200", new ApiResponse().description("响应成功信息").headers(headers)
@@ -78,6 +79,7 @@ public class InterfaceDescriptionConfig {
                 .schema(new StringSchema())         // 参数类型
                 .example("tx117839");               // 示例数据
         parameters.add(sign);
+
         // 设置当前接口描述信息
         Operation operation1 = new Operation()
                 .operationId("addTeacher")
@@ -85,6 +87,7 @@ public class InterfaceDescriptionConfig {
                 .requestBody(requestBody)
                 .parameters(parameters)
                 .responses(apiResponses);
+
         // 设置接口路径信息及请求方式（这里我设置了一个post请求的接口）
         return new PathItem().post(operation1).description("POST请求");
     }
