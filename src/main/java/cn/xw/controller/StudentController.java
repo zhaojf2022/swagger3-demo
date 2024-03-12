@@ -22,7 +22,6 @@ import java.util.List;
  * @author AnHui OuYang
  * @version 1.0
  */
-// 接口定义
 @RestController
 @RequestMapping("/student")
 @Tag(

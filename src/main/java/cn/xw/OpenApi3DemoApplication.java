@@ -3,11 +3,14 @@ package cn.xw;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * @author Anhui OuYang
+ */
 @SpringBootApplication
-public class OpenApi3DemoSwagger3Application {
+public class OpenApi3DemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OpenApi3DemoSwagger3Application.class, args);
+        SpringApplication.run(OpenApi3DemoApplication.class, args);
     }
 
 }

@@ -5,10 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
+ * 响应对象模型定义
  * @author AnHui OuYang
  * @version 1.0
  */
-// 响应对象模型定义
 @Data
 @AllArgsConstructor
 @Schema(description = "响应返回数据对象")

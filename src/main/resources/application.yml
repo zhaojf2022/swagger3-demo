@@ -6,7 +6,7 @@ server:
 spring:
   # 配置Thymeleaf模板
   thymeleaf:
-    cache: false                      # 是否有模板缓存
+    cache: false                      # 是否使用模板缓存
     prefix: classpath:/templates/     # 模板放置的位置
     suffix: .html                     # 模板后缀
     mode: HTML                        # 模板类型

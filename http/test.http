@@ -1,0 +1,23 @@
+### Find All Student
+GET http://localhost:8888/demo/student/findAll
+Content-Type: application/json
+
+### Find Student By Id
+GET http://localhost:8888/demo/student/findOne/3
+Content-Type: application/json
+
+### Save a Student
+POST http://localhost:8888/demo/student/saveStudent
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "王五",
+  "age": 25,
+  "address": "山东枣庄",
+  "fraction": 94.5,
+  "likes": [
+    "摸鱼",
+    "读书"
+  ]
+}
