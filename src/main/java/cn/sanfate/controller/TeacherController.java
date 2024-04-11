@@ -1,7 +1,7 @@
-package cn.xw.controller;
+package cn.sanfate.controller;
 
-import cn.xw.entity.AjaxResult;
-import cn.xw.entity.TeacherDTO;
+import cn.sanfate.entity.AjaxResult;
+import cn.sanfate.entity.TeacherDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;

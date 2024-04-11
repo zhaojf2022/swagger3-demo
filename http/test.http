@@ -1,13 +1,13 @@
 ### Find All Student
-GET http://localhost:8888/demo/student/findAll
+GET http://localhost:10461/demo/student/findAll
 Content-Type: application/json
 
 ### Find Student By Id
-GET http://localhost:8888/demo/student/findOne/3
+GET http://localhost:10461/demo/student/findOne/3
 Content-Type: application/json
 
 ### Save a Student
-POST http://localhost:8888/demo/student/saveStudent
+POST http://localhost:10461/demo/student/saveStudent
 Content-Type: application/json
 
 {

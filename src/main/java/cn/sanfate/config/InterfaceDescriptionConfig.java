@@ -1,4 +1,4 @@
-package cn.xw.config;
+package cn.sanfate.config;
 
 import io.swagger.v3.oas.models.Operation;
 import io.swagger.v3.oas.models.PathItem;

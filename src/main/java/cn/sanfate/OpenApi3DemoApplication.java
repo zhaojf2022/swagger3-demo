@@ -1,4 +1,4 @@
-package cn.xw;
+package cn.sanfate;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
